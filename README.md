@@ -19,7 +19,9 @@
 
 - 📄 Know about my experiences [https://github.com/abdullah43577?tab=repositories](https://github.com/abdullah43577?tab=repositories)
 
-- ⚡ Fun fact **I love Computers more than life itself**
+- ⚡ Fun fact **I love Computers more than almost anything**
+
+- ☣️ **The best things come from living outside of your comfort zone.**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
