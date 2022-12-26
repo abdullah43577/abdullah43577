@@ -1,6 +1,6 @@
 [![MasterHead](https://digitaledgetech.in/images/Banner_03.gif)]
 <h1 align="center">Hi 👋, I'm Abdullah Ayoola</h1>
-<h3 align="center">A passionate Front-End Developer from Nigeria and aspiring Full-Stack Developer.</h3>
+<h3 align="center">An Aspiring FrontEnd Developer From Nigeria</h3>
 <img align="right" alt="coding gif" width= "400" src="https://media0.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abdullah43577&label=Profile%20views&color=0e75b6&style=flat" alt="abdullah43577" /> </p>
@@ -9,11 +9,11 @@
 
 - 🌱 I’m currently learning **JavaScript by Jonas Schmedtmann on Udemy**
 
-- 👯 I’m looking to collaborate on **HTML, CSS, and JAVASCRIPT**
+- 👯 I’m looking to collaborate on **FRONTEND WEB DEVELOPMENT**
 
 - 👨‍💻 All of my projects are available at [https://github.com/abdullah43577?tab=repositories](https://github.com/abdullah43577?tab=repositories)
 
-- 💬 Ask me about **HTML, CSS and JavaScript**
+- 💬 Ask me about **FRONTEND WEB DEVELOPMENT**
 
 - 📫 How to reach me **officialayo540@gmail.com**
 
