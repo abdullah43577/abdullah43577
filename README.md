@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/officialayo540" target="blank"><img src="https://img.shields.io/twitter/follow/officialayo540?logo=twitter&style=for-the-badge" alt="officialayo540" /></a> </p>
 
-- 🌱 I’m currently looking for **REACT COURSES**
+- 🌱 I’m currently learning **REACT**
 
 - 👯 I’m looking to collaborate on **FRONTEND WEB DEVELOPMENT**
 
