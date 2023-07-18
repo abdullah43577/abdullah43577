@@ -7,13 +7,13 @@
 
 <p align="left"> <a href="https://twitter.com/officialayo540" target="blank"><img src="https://img.shields.io/twitter/follow/officialayo540?logo=twitter&style=for-the-badge" alt="officialayo540" /></a> </p>
 
-- 🌱 I’m currently learning **REACT**
+- 🌱 I’m currently learning **NEXTJS and Backend Development (NODEJS)**
 
-- 👯 I’m looking to collaborate on **FRONTEND WEB DEVELOPMENT**
+- 👯 I’m looking to collaborate on **WEB DEVELOPMENT**
 
 - 👨‍💻 All of my projects are available at [https://github.com/abdullah43577?tab=repositories](https://github.com/abdullah43577?tab=repositories)
 
-- 💬 Ask me about **FRONTEND WEB DEVELOPMENT**
+- 💬 Ask me about anything **WEB DEVELOPMENT**
 
 - 📫 How to reach me **officialayo540@gmail.com**
 
