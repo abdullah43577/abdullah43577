@@ -23,6 +23,8 @@
 
 - ☣️ **The best things come from living outside of your comfort zone.**
 
+- View my Portfolio [https://ayooladev.netlify.app](https://ayooladev.netlify.app)
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://codepen.io/officialayo540" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="officialayo540" height="30" width="40" /></a>
