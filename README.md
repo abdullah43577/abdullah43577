@@ -1,6 +1,6 @@
 [![MasterHead](https://digitaledgetech.in/images/Banner_03.gif)]
 <h1 align="center">Hi 👋, I'm Abdullah Ayoola</h1>
-<h3 align="center">Elevating the online world as a Front-End Developer 💻. From Nigeria and constantly sharpening my skills, with a strong focus on JavaScript and React</h3>
+<h3 align="center">Elevating the online world as a Full Stack Developer 💻. From Nigeria and constantly sharpening my skills, with a strong focus on React and NodeJS</h3>
 <img align="right" alt="coding gif" width= "400" src="https://media0.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=abdullah43577&label=Profile%20views&color=0e75b6&style=flat" alt="abdullah43577" /> </p>
