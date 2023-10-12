@@ -23,7 +23,7 @@
 
 - ☣️ **The best things come from living outside of your comfort zone.**
 
-- View my Portfolio [https://ayooladev.netlify.app](https://reactmode.netlify.app/)
+- View my Portfolio [https://reactmode.netlify.app](https://reactmode.netlify.app)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
