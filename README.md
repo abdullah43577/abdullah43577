@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/officialayo540" target="blank"><img src="https://img.shields.io/twitter/follow/officialayo540?logo=twitter&style=for-the-badge" alt="officialayo540" /></a> </p>
 
-- 🌱 I’m currently learning **NEXTJS and Backend Development (NODEJS)**
+- 🌱 I’m currently learning **TypeScript**
 
 - 👯 I’m looking to collaborate on **WEB DEVELOPMENT**
 
