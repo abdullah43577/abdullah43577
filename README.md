@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on a Fullstack Project<br>👯 I’m looking to collaborate on Web Development<br>🌱 I’m currently learning TypeScript<br>💬 Ask me about Web Development<br>⚡ Fun fact: I spend more time with the computer than with actual people
+Hi! I'm Abdullah, a Fullstack Web Developer based in Nigeria. I create user-friendly interfaces for fast-growing startups. I develop fullstack solutions that delight and inspire users.
 
 
 ## 🌐 Socials:
