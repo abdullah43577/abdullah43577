@@ -1,5 +1,5 @@
 # 💫 About Me:
-Hi! I'm Abdullah, a Fullstack Web Developer based in Nigeria. I create user-friendly interfaces for fast-growing startups. I develop fullstack solutions that delight and inspire users.
+Hi! I'm Abdullah, a Frontend Developer based in Nigeria. I create user-friendly interfaces for fast-growing startups. I develop Frontend solutions that delight and inspire users.
 
 
 ## 🌐 Socials:
