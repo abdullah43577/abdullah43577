@@ -12,9 +12,19 @@ export const cardsConfigSchema = z.object({
   projects: z
     .array(
       z.object({
-        name: z.string().min(1),
+        name: z
+          .string()
+          .transform(name => name.replace(/\s+/g, " ").trim())
+          .pipe(z.string().min(1)),
         type: z.enum(["ORG", "OWN"]),
-        repos: z.array(z.string().regex(/^[\w.-]+\/[\w.-]+$/, "Use owner/name")).min(1),
+        repos: z
+          .array(
+            z
+              .string()
+              .transform(repo => repo.replace(/\s+/g, ""))
+              .pipe(z.string().regex(/^[\w.-]+\/[\w.-]+$/, "Use owner/name")),
+          )
+          .min(1),
       }),
     )
     .default([]),
