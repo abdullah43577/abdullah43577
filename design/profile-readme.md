@@ -14,13 +14,14 @@ I build the whole product: the API, the database schema, the web client and the 
 
 | Project | What it is | Type | Links |
 | --- | --- | --- | --- |
-| **E-Metric Jobs** | A job marketplace with real-time hiring workflows | Organisation | [Case study](https://reactmode.dev/projects/emetric-jobs) |
-| **Rel8** | Membership management for associations: dues, elections, events | Organisation | [Case study](https://reactmode.dev/projects/rel8) |
-| **E-Metric Suite** | A multi-tenant HR and performance platform | Organisation | [Live](https://emetricsuite.com) |
+| **E-Metric Jobs** | A job marketplace with real-time hiring workflows | Organisation | [Live](https://emetricjobs.com) · [Case study](https://reactmode.dev/projects/emetric-jobs) |
+| **Rel8** | Membership management for associations: dues, elections, events | Organisation | [Live](https://alumsapp.com) · [Case study](https://reactmode.dev/projects/rel8) |
+| **E-Metric Suite** | A multi-tenant HR and performance platform | Organisation | [Live](https://emetricsuite.com) · [Case study](https://reactmode.dev/projects/e-metric-suite) |
+| **HESED FastTrack** | A shipping platform: compare courier quotes, book, pay from a wallet and track | Client | [Live](https://hesedfastrack.com) · [Case study](https://reactmode.dev/projects/hesed-fasttrack) |
 | **Elevra** | An AI job-application coach, from the posting to the thank-you | Personal | [Live](https://elevra.reactmode.dev) · [Code](https://github.com/abdullah43577/Elevra-Mobile-2026) |
 | **Heed** | An AI inbox assistant that drafts your replies and never sends without your tap | Personal | [Live](https://heed.reactmode.dev) · [Code](https://github.com/abdullah43577/heed) |
 
-Organisation projects live in private repositories, so their case studies on [reactmode.dev/projects](https://reactmode.dev/projects) are the write-up.
+Organisation and client projects live in private repositories, so their case studies on [reactmode.dev/projects](https://reactmode.dev/projects) are the write-up.
 
 ## 📦 Open source
 
