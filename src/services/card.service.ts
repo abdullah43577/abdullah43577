@@ -34,6 +34,12 @@ export class CardService {
     }
   }
 
+  async warmCache() {
+    const results = await Promise.allSettled([this.getActivity(), this.getProjectCommits(), this.getLanguages()]);
+    const failed = results.filter(result => result.status === "rejected").length;
+    console.log(failed ? `⚠️  Cache warmed with ${failed} failed data set(s)` : "✅ Card data cached");
+  }
+
   renderUnavailable(theme: ThemeName) {
     return renderUnavailable(palettes[theme]);
   }

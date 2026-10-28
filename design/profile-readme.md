@@ -54,23 +54,23 @@ Organisation projects live in private repositories, so their case studies on [re
 ## 📊 Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://STATS_HOST/v1/cards/overview?theme=dark" />
-  <img width="816" src="https://STATS_HOST/v1/cards/overview?theme=light" alt="Activity over the past twelve months" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://abdullah43577.onrender.com/v1/cards/overview?theme=dark" />
+  <img width="816" src="https://abdullah43577.onrender.com/v1/cards/overview?theme=light" alt="Activity over the past twelve months" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://STATS_HOST/v1/cards/monthly?theme=dark" />
-  <img width="816" src="https://STATS_HOST/v1/cards/monthly?theme=light" alt="Commits by month" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://abdullah43577.onrender.com/v1/cards/monthly?theme=dark" />
+  <img width="816" src="https://abdullah43577.onrender.com/v1/cards/monthly?theme=light" alt="Commits by month" />
 </picture>
 
 <p>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://STATS_HOST/v1/cards/projects?theme=dark" />
-  <img width="400" src="https://STATS_HOST/v1/cards/projects?theme=light" alt="Commits by project" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://abdullah43577.onrender.com/v1/cards/projects?theme=dark" />
+  <img width="400" src="https://abdullah43577.onrender.com/v1/cards/projects?theme=light" alt="Commits by project" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://STATS_HOST/v1/cards/languages?theme=dark" />
-  <img width="400" src="https://STATS_HOST/v1/cards/languages?theme=light" alt="Most used languages" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://abdullah43577.onrender.com/v1/cards/languages?theme=dark" />
+  <img width="400" src="https://abdullah43577.onrender.com/v1/cards/languages?theme=light" alt="Most used languages" />
 </picture>
 </p>
 

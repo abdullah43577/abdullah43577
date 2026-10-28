@@ -2,7 +2,9 @@ import "dotenv/config";
 
 import express from "express";
 import { configureApp } from "./config";
+import { cacheTtlMs } from "./helper/cache";
 import { registerRoutes } from "./routes/index";
+import { CardService } from "./services/card.service";
 
 const { PORT, GITHUB_TOKEN, GITHUB_USERNAME } = process.env;
 
@@ -16,8 +18,13 @@ const app = express();
 configureApp(app);
 registerRoutes(app);
 
+const cardService = new CardService();
+
+// GitHub's image proxy times out on slow images, so cards must always be answered from a warm cache.
 const server = app.listen(PORT, () => {
   console.log(`✅ Server started on http://localhost:${PORT}`);
+  void cardService.warmCache();
+  setInterval(() => void cardService.warmCache(), cacheTtlMs() + 1_000);
 });
 
 const shutdown = (signal: string) => {
