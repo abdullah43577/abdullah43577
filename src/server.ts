@@ -5,6 +5,7 @@ import { configureApp } from "./config";
 import { cacheTtlMs } from "./helper/cache";
 import { registerRoutes } from "./routes/index";
 import { CardService } from "./services/card.service";
+import { getCardsConfig } from "./utils/cardsConfig";
 
 const { PORT, GITHUB_TOKEN, GITHUB_USERNAME } = process.env;
 
@@ -17,6 +18,13 @@ const app = express();
 
 configureApp(app);
 registerRoutes(app);
+
+try {
+  const { projects } = getCardsConfig();
+  console.log(`✅ Cards config loaded with ${projects.length} project(s)`);
+} catch (error) {
+  console.error(`❌ ${error instanceof Error ? error.message : error}`);
+}
 
 const cardService = new CardService();
 

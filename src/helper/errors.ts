@@ -20,6 +20,12 @@ export class BadRequestError extends AppError {
   }
 }
 
+export class ConfigError extends AppError {
+  constructor(message = "Server configuration is invalid") {
+    super(message, 500);
+  }
+}
+
 export class UpstreamError extends AppError {
   constructor(message = "GitHub did not answer as expected") {
     super(message, 502);
