@@ -1,0 +1,9 @@
+node_modules
+.env
+dist
+cards.config.json
+
+# Agent working notes — local only, kept out of history on purpose
+CLAUDE.md
+AGENTS.md
+.claude/

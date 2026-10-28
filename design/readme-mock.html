@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Profile README mockup</title>
+<style>
+  :root[data-theme="light"] {
+    --gh-bg: #ffffff; --gh-header: #f6f8fa; --gh-fg: #1f2328; --gh-muted: #59636e;
+    --gh-border: #d1d9e0; --gh-link: #0969da; --gh-code: #eff1f3; --gh-btn: #f6f8fa;
+    --gh-tab-active: #fd8c73;
+  }
+  :root[data-theme="dark"] {
+    --gh-bg: #0d1117; --gh-header: #010409; --gh-fg: #f0f6fc; --gh-muted: #9198a1;
+    --gh-border: #3d444d; --gh-link: #4493f8; --gh-code: #262c36; --gh-btn: #212830;
+    --gh-tab-active: #f78166;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--gh-bg); color: var(--gh-fg);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--gh-link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .review {
+    position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    padding: 10px 16px; background: #14141A; color: #F5F4F2;
+    font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .06em;
+  }
+  .review strong { margin-right: auto; font-weight: 600; text-transform: uppercase; }
+  .review button {
+    min-height: 32px; padding: 0 12px; border: 1px solid #3a3a40; border-radius: 6px;
+    background: transparent; color: inherit; font: inherit; cursor: pointer;
+  }
+  .review button[aria-pressed="true"] { background: #F5F4F2; color: #14141A; border-color: #F5F4F2; }
+
+  .frame { margin: 0 auto; transition: max-width .2s; }
+  .frame.phone { max-width: 390px; border-left: 1px solid var(--gh-border); border-right: 1px solid var(--gh-border); }
+
+  .gh-header {
+    display: flex; align-items: center; gap: 12px; padding: 14px 24px;
+    background: var(--gh-header); border-bottom: 1px solid var(--gh-border);
+  }
+  .gh-header svg { fill: var(--gh-fg); }
+  .gh-header span { font-weight: 600; }
+  .tabs { display: flex; gap: 8px; padding: 0 24px; border-bottom: 1px solid var(--gh-border); overflow-x: auto; }
+  .tabs a { padding: 12px 8px; color: var(--gh-fg); white-space: nowrap; border-bottom: 2px solid transparent; }
+  .tabs a.on { border-color: var(--gh-tab-active); font-weight: 600; }
+  .tabs .count { margin-left: 6px; padding: 0 6px; border-radius: 999px; background: var(--gh-code); font-size: 12px; }
+
+  .layout { display: grid; grid-template-columns: 296px minmax(0, 1fr); gap: 24px; max-width: 1280px; margin: 0 auto; padding: 24px; }
+  .phone .layout { grid-template-columns: 1fr; padding: 16px; }
+
+  .side .avatar { width: 100%; max-width: 296px; aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--gh-border); display: block; }
+  .phone .side { display: grid; grid-template-columns: 72px 1fr; gap: 0 16px; align-items: center; }
+  .phone .side .avatar { width: 72px; }
+  .phone .side .rest { grid-column: 1 / -1; }
+  .side h1 { margin: 16px 0 0; font-size: 24px; line-height: 1.25; }
+  .side .handle { font-size: 20px; font-weight: 300; color: var(--gh-muted); }
+  .side .bio { margin: 16px 0; font-size: 16px; }
+  .side .bio mark { background: none; color: inherit; outline: 1px dashed var(--gh-tab-active); outline-offset: 3px; border-radius: 2px; }
+  .side .btn { display: block; width: 100%; padding: 5px 16px; text-align: center; border: 1px solid var(--gh-border); border-radius: 6px; background: var(--gh-btn); color: var(--gh-fg); font-weight: 500; }
+  .side ul { list-style: none; padding: 0; margin: 16px 0 0; color: var(--gh-muted); }
+  .side li { padding: 2px 0; }
+
+  .readme { border: 1px solid var(--gh-border); border-radius: 6px; padding: 24px; min-width: 0; }
+  .readme > .path { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--gh-muted); margin-bottom: 16px; }
+  .md { font-size: 16px; line-height: 1.5; word-wrap: break-word; }
+  .md h1, .md h2 { padding-bottom: .3em; border-bottom: 1px solid var(--gh-border); margin: 24px 0 16px; font-weight: 600; line-height: 1.25; }
+  .md h1 { font-size: 2em; margin-top: 0; }
+  .md h2 { font-size: 1.5em; }
+  .md p, .md ul, .md table { margin: 0 0 16px; }
+  .md ul { padding-left: 2em; }
+  .md li + li { margin-top: .25em; }
+  .md hr { height: 4px; border: 0; background: var(--gh-border); margin: 24px 0; }
+  .md code { padding: .2em .4em; border-radius: 6px; background: var(--gh-code); font: 85% ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .md img { max-width: 100%; vertical-align: middle; }
+  .md .table-wrap { overflow-x: auto; margin-bottom: 16px; }
+  .md table { border-collapse: collapse; width: max-content; max-width: 100%; margin: 0; }
+  .md th, .md td { padding: 6px 13px; border: 1px solid var(--gh-border); text-align: left; }
+  .md tr:nth-child(2n) td { background: var(--gh-header); }
+  .md .badges img { margin: 0 2px 4px 0; }
+  .md .cards img { margin: 0 4px 8px 0; }
+
+  .pinned { margin-top: 24px; }
+  .pinned h3 { font-size: 16px; font-weight: 400; margin: 0 0 8px; }
+  .pinned h3 span { color: var(--gh-muted); font-size: 13px; }
+  .pins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .phone .pins { grid-template-columns: 1fr; }
+  .pin { border: 1px solid var(--gh-border); border-radius: 6px; padding: 16px; }
+  .pin b { color: var(--gh-link); font-size: 14px; }
+  .pin p { margin: 6px 0 12px; color: var(--gh-muted); font-size: 12px; }
+  .pin small { color: var(--gh-muted); font-size: 12px; display: inline-flex; align-items: center; gap: 6px; }
+  .pin i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .readme-wrap { min-width: 0; }
+  .notes { max-width: 1280px; margin: 8px auto 48px; padding: 0 24px; }
+  .notes section { border: 1px dashed var(--gh-border); border-radius: 6px; padding: 20px 24px; }
+  .notes h2 { margin: 0 0 4px; font-size: 16px; }
+  .notes p { margin: 0 0 12px; color: var(--gh-muted); }
+  .notes table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .notes th, .notes td { text-align: left; padding: 8px 12px 8px 0; border-top: 1px solid var(--gh-border); vertical-align: top; }
+  .notes code { font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .phone + .notes { display: none; }
+</style>
+</head>
+<body>
+
+<div class="review" role="toolbar" aria-label="Mockup controls">
+  <strong>Mockup · github.com/abdullah43577</strong>
+  <button data-theme-btn="light" aria-pressed="true">GitHub light</button>
+  <button data-theme-btn="dark" aria-pressed="false">GitHub dark</button>
+  <button data-width-btn="desktop" aria-pressed="true">Desktop</button>
+  <button data-width-btn="phone" aria-pressed="false">Phone</button>
+</div>
+
+<div class="frame" id="frame">
+  <header class="gh-header">
+    <svg width="32" height="32" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    <span>abdullah43577</span>
+  </header>
+  <nav class="tabs">
+    <a class="on">Overview</a><a>Repositories<span class="count">112</span></a><a>Projects</a><a>Packages</a><a>Stars<span class="count">10</span></a>
+  </nav>
+
+  <div class="layout">
+    <aside class="side">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/100965547?v=4" alt="" />
+      <div>
+        <h1>Abdullah Ayoola</h1>
+        <div class="handle">abdullah43577</div>
+      </div>
+      <div class="rest">
+        <p class="bio"><mark>Fullstack &amp; mobile engineer. I build the whole product: the API, the schema, the web app and the app on your phone.</mark></p>
+        <a class="btn">Edit profile</a>
+        <ul>
+          <li><b style="color:var(--gh-fg)">53</b> followers · <b style="color:var(--gh-fg)">10</b> following</li>
+          <li>Lagos, Nigeria</li>
+          <li><a>reactmode.dev</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="readme-wrap">
+     <div class="readme">
+      <div class="path">abdullah43577 / README.md</div>
+      <article class="md">
+        <h1>Hi, I'm Abdullah 👋</h1>
+        <p><strong>Fullstack &amp; Mobile Engineer</strong> based in Lagos, Nigeria.</p>
+        <p>I build the whole product: the API, the database schema, the web client and the app you install on your phone. Since 2023 I've shipped a job marketplace with real-time messaging and queued background work, a multi-tenant HR platform, a membership system for associations, and several React Native apps on the App Store and Play Store.</p>
+        <p>🌐 <strong>Portfolio:</strong> <a>reactmode.dev</a> &nbsp;·&nbsp; 📫 <strong>Email:</strong> <a>abdullah.ayoola@reactmode.dev</a> &nbsp;·&nbsp; 🟢 Available for new work</p>
+        <p class="badges">
+          <img src="https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn" />
+          <img src="https://img.shields.io/badge/X-000000?logo=x&logoColor=white" alt="X" />
+          <img src="https://img.shields.io/badge/reactmode.dev-14141A?logo=googlechrome&logoColor=white" alt="Portfolio" />
+        </p>
+        <hr />
+
+        <h2>🚀 Selected work</h2>
+        <div class="table-wrap">
+        <table>
+          <thead><tr><th>Project</th><th>What it is</th><th>Type</th><th>Links</th></tr></thead>
+          <tbody>
+            <tr><td><strong>E-Metric Jobs</strong></td><td>A job marketplace with real-time hiring workflows</td><td>Organisation</td><td><a>Case study</a></td></tr>
+            <tr><td><strong>Rel8</strong></td><td>Membership management for associations: dues, elections, events</td><td>Organisation</td><td><a>Case study</a></td></tr>
+            <tr><td><strong>E-Metric Suite</strong></td><td>A multi-tenant HR and performance platform</td><td>Organisation</td><td><a>Live</a></td></tr>
+            <tr><td><strong>Elevra</strong></td><td>An AI job-application coach, from the posting to the thank-you</td><td>Personal</td><td><a>Live</a> · <a>Code</a></td></tr>
+            <tr><td><strong>Heed</strong></td><td>An AI inbox assistant that drafts your replies and never sends without your tap</td><td>Personal</td><td><a>Live</a> · <a>Code</a></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p>Organisation projects live in private repositories, so their case studies on <a>reactmode.dev/projects</a> are the write-up.</p>
+
+        <h2>📦 Open source</h2>
+        <ul>
+          <li><strong><a>@reactmode/unused-file-detector</a></strong>: finds files whose exports are never imported, and dependencies nothing uses. <code>npx @reactmode/unused-file-detector</code></li>
+          <li><strong><a>@reactmode/env-check</a></strong>: validates <code>.env</code> against <code>.env.example</code> before runtime, so a deploy fails on your machine rather than in production. <code>npx @reactmode/env-check</code></li>
+        </ul>
+
+        <h2>🛠️ Stack</h2>
+        <p class="badges"><strong>Languages</strong><br />
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="" />
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="" />
+        </p>
+        <p class="badges"><strong>Web</strong><br />
+          <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="" />
+          <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Zustand-443E38?style=flat-square&logo=react&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="" />
+        </p>
+        <p class="badges"><strong>Mobile</strong><br />
+          <img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="" />
+          <img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/EAS_Build-000020?style=flat-square&logo=expo&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/RevenueCat-F25A5A?style=flat-square&logoColor=white" alt="" />
+        </p>
+        <p class="badges"><strong>Backend</strong><br />
+          <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Mongoose-880000?style=flat-square&logo=mongoose&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Django_REST-092E20?style=flat-square&logo=django&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Socket.IO-010101?style=flat-square&logo=socketdotio&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/BullMQ-DC382D?style=flat-square&logo=redis&logoColor=white" alt="" />
+        </p>
+        <p class="badges"><strong>Data &amp; infrastructure</strong><br />
+          <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white" alt="" />
+          <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="" />
+        </p>
+
+        <h2>🧭 How I work</h2>
+        <ul>
+          <li><strong>Small files, strict layers.</strong> Controller → service → repository, never skipped.</li>
+          <li><strong>Typed end to end.</strong> Strict TypeScript from schema to button, Zod wherever data enters.</li>
+          <li><strong>Built for the network people actually have.</strong> Persisted caches, optimistic writes, real offline states.</li>
+          <li><strong>Design systems, not screens.</strong> Semantic tokens and a shared primitive set, so dark mode isn't a bolt-on.</li>
+        </ul>
+
+        <h2>📊 Activity</h2>
+        <p class="cards"><img data-card="overview" src="cards/overview-light.svg" width="816" alt="Activity over the past twelve months" /></p>
+        <p class="cards"><img data-card="monthly" src="cards/monthly-light.svg" width="816" alt="Commits by month" /></p>
+        <p class="cards">
+          <img data-card="projects" src="cards/projects-light.svg" width="400" alt="Commits by project" />
+          <img data-card="languages" src="cards/languages-light.svg" width="400" alt="Most used languages" />
+        </p>
+        <hr />
+        <p class="badges"><img src="https://img.shields.io/badge/Buy_me_a_coffee-FFDD00?style=flat-square&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee" /></p>
+      </article>
+     </div>
+
+      <div class="pinned">
+        <h3>Pinned <span>· suggested</span></h3>
+        <div class="pins">
+          <div class="pin"><b>heed</b><p>AI inbox assistant: Expo client</p><small><i style="background:#3178C6"></i>TypeScript</small></div>
+          <div class="pin"><b>heed-server</b><p>Gmail pipeline, triage and drafting API</p><small><i style="background:#3178C6"></i>TypeScript</small></div>
+          <div class="pin"><b>Elevra-Mobile-2026</b><p>AI job-application coach</p><small><i style="background:#3178C6"></i>TypeScript</small></div>
+          <div class="pin"><b>unused-file-detector-cli</b><p>npx @reactmode/unused-file-detector</p><small><i style="background:#3178C6"></i>TypeScript</small></div>
+          <div class="pin"><b>env-check</b><p>npx @reactmode/env-check</p><small><i style="background:#A88B00"></i>JavaScript</small></div>
+          <div class="pin"><b>readme-stats-server</b><p>The service drawing the cards above</p><small><i style="background:#3178C6"></i>TypeScript</small></div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div class="notes">
+  <section>
+    <h2>Design notes for review</h2>
+    <p>Only the four Activity cards come from the new backend. Everything else is plain markdown and shields.io badges. The numbers on the cards are your real commit history from the repos on this machine (languages excepted, which are illustrative). The live service will read the same figures from GitHub's API using your token, so private organisation work counts too. The dashed outline in the sidebar marks a suggested new bio, which you set in your GitHub profile settings. The "Pinned" row is also a suggestion, set from your profile.</p>
+    <table>
+      <thead><tr><th>Card</th><th>Endpoint</th><th>Shows</th></tr></thead>
+      <tbody>
+        <tr><td>Overview</td><td><code>GET /v1/cards/overview?theme=light|dark</code></td><td>Commits in the past 12 months as the one headline figure, plus active days, longest streak and current streak</td></tr>
+        <tr><td>Monthly</td><td><code>GET /v1/cards/monthly?theme=</code></td><td>Commits per month for 12 months. Grey columns, with the current month in the accent. Only the peak and the latest month carry a value label</td></tr>
+        <tr><td>Projects</td><td><code>GET /v1/cards/projects?theme=</code></td><td>Commits per project, all time. A config file maps repos to project names, so private organisation repo names never appear on the card. ORG or OWN is shown as text, not colour</td></tr>
+        <tr><td>Languages</td><td><code>GET /v1/cards/languages?theme=</code></td><td>Top 5 languages by bytes, plus "Other". GitHub's language colours, adjusted so each one is distinguishable and readable on GitHub's light and dark backgrounds (checked with a palette validator)</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px">Each card has a light and a dark version, picked by GitHub's own theme through <code>&lt;picture&gt;</code>. No gradients, no shadows, hairline borders, one accent per card. GitHub serves README images as static pictures, so the cards can't have hover tooltips; every value that matters is printed on the card. No deployment URL yet, so the README draft uses a <code>STATS_HOST</code> placeholder.</p>
+  </section>
+</div>
+
+<script>
+  const root = document.documentElement;
+  const frame = document.getElementById("frame");
+  document.querySelectorAll("[data-theme-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const theme = btn.dataset.themeBtn;
+      root.dataset.theme = theme;
+      document.querySelectorAll("[data-theme-btn]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+      document.querySelectorAll("[data-card]").forEach((img) => { img.src = `cards/${img.dataset.card}-${theme}.svg`; });
+    });
+  });
+  document.querySelectorAll("[data-width-btn]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      frame.classList.toggle("phone", btn.dataset.widthBtn === "phone");
+      document.querySelectorAll("[data-width-btn]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "projects": [
+    {
+      "name": "Example Product",
+      "type": "ORG",
+      "repos": ["example-org/example-server", "example-org/example-web"]
+    },
+    {
+      "name": "Side Project",
+      "type": "OWN",
+      "repos": ["your-username/side-project"]
+    }
+  ],
+  "excludeLanguages": ["Jupyter Notebook"]
+}

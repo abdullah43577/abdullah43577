@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" role="img" aria-label="Commits by project">
+<style>
+  .eyebrow { font: 500 11px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; letter-spacing: 1.5px; fill: #7D7B76; }
+  .label { font: 500 10.5px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; letter-spacing: 1.3px; fill: #7D7B76; }
+  .tick { font: 500 10.5px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; fill: #7D7B76; font-variant-numeric: tabular-nums; }
+  .num { font: 500 12px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; fill: #9C9A95; font-variant-numeric: tabular-nums; }
+  .name { font: 500 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; fill: #F5F4F2; }
+  .value { font: 600 28px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; letter-spacing: -0.6px; fill: #F5F4F2; }
+  .hero { font: 600 56px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; letter-spacing: -2px; fill: #F5F4F2; }
+  .unit { font: 500 15px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; fill: #9C9A95; }
+  .body { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; fill: #9C9A95; }
+  .rule { stroke: #30363D; stroke-width: 1; fill: none; }
+  .grid { stroke: #21262D; stroke-width: 1; }
+</style>
+<rect x="0.5" y="0.5" width="399" height="299" rx="12" class="rule"/>
+
+<text x="24" y="34" class="eyebrow">WHERE MY COMMITS GO</text><text x="376" y="34" class="eyebrow" text-anchor="end">ALL TIME</text><line x1="24" y1="50" x2="376" y2="50" class="rule"/>
+<text x="24" y="92" class="name">E-Metric Jobs</text><text x="148" y="92" class="label" text-anchor="end">ORG</text><path d="M160 82H324Q328 82 328 86V90Q328 94 324 94H160Z" fill="#6B6A67"/><text x="336" y="92" class="num">823</text><text x="24" y="128" class="name">Rel8</text><text x="148" y="128" class="label" text-anchor="end">ORG</text><path d="M160 118H213.76913730255166Q217.76913730255166 118 217.76913730255166 122V126Q217.76913730255166 130 213.76913730255166 130H160Z" fill="#6B6A67"/><text x="225.76913730255166" y="128" class="num">283</text><text x="24" y="164" class="name">E-Metric Suite</text><text x="148" y="164" class="label" text-anchor="end">ORG</text><path d="M160 154H198.25516403402187Q202.25516403402187 154 202.25516403402187 158V162Q202.25516403402187 166 198.25516403402187 166H160Z" fill="#6B6A67"/><text x="210.25516403402187" y="164" class="num">207</text><text x="24" y="200" class="name">Elevra</text><text x="148" y="200" class="label" text-anchor="end">OWN</text><path d="M160 190H182.9453219927096Q186.9453219927096 190 186.9453219927096 194V198Q186.9453219927096 202 182.9453219927096 202H160Z" fill="#6B6A67"/><text x="194.9453219927096" y="200" class="num">132</text><text x="24" y="236" class="name">Heed</text><text x="148" y="236" class="label" text-anchor="end">OWN</text><path d="M160 226H163.3487241798299Q167.3487241798299 226 167.3487241798299 230V234Q167.3487241798299 238 163.3487241798299 238H160Z" fill="#6B6A67"/><text x="175.3487241798299" y="236" class="num">36</text>
+<line x1="24" y1="260" x2="376" y2="260" class="rule"/>
+<text x="24" y="282" class="label">ORG = ORGANISATION REPO · OWN = PERSONAL</text>
+
+</svg>

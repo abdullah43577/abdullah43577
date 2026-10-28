@@ -1,0 +1,28 @@
+{
+  "name": "readme-stats-server",
+  "version": "1.0.0",
+  "description": "Serves the SVG activity cards on the GitHub profile README of abdullah43577",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "type-check": "tsc --noEmit --watch",
+    "build": "tsc",
+    "start": "tsx src/server.ts"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0",
+    "morgan": "^1.12.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^26.6.5"
+  }
+}
